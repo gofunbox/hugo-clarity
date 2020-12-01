@@ -7,7 +7,7 @@
   gtag('config', '{{ . }}');
 </script>
 {{- end -}}
-{{- with .Site.Params.baidu_analytics }}
+{{- with .Site.Params.baidu_analytics -}}
 <script>
   var _hmt = _hmt || [];
   (function() {
@@ -17,4 +17,9 @@
     s.parentNode.insertBefore(hm, s);
   })();
 </script>
+{{- end -}}
+{{- with .Site.Params.cnzz_analytics }}
+<div style="display: none;">
+    <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id={{ . }}&web_id={{ . }}"></script>
+</div>
 {{- end }}
